@@ -1,0 +1,22 @@
+package org.datagrid.poc.controller;
+
+import org.datagrid.poc.entities.Vehicle;
+import org.datagrid.poc.repository.vehicleRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PocController {
+
+	@Autowired
+	vehicleRepository vehiclerepo;
+	@GetMapping("/vehicle/get/{id}")
+	public Vehicle getVehicle(@PathVariable("id") int id)
+	{
+		return vehiclerepo.retrive(id);
+	}
+}
+
+
