@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.datagrid.poc.entities.Vehicle;
+import org.datagrid.poc.nativeentities.NativeVehicle;
 import org.infinispan.Cache;
 import org.infinispan.configuration.cache.ConfigurationBuilder;
 import org.infinispan.eviction.EvictionStrategy;
@@ -13,6 +14,7 @@ import org.infinispan.manager.EmbeddedCacheManager;
 @SuppressWarnings("deprecation")
 public class CacheManager {
 	static Cache <Integer,Vehicle > vehicleCache ;
+	static Cache <Integer,NativeVehicle > vehicleNativeCache ;
 	static EmbeddedCacheManager manager;
 	
 	static

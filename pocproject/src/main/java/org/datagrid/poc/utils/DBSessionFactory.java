@@ -1,6 +1,6 @@
 package org.datagrid.poc.utils;
-
 import org.datagrid.poc.entities.Vehicle;
+import org.datagrid.poc.nativeentities.NativeVehicle;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
